@@ -12,6 +12,8 @@ Decryption is just a reverse process, the keys are loaded for decryption, the te
 
 After a few attemps and some research I ended up making a simple Yates & Fisher Shuffle to randomize the keys.
 
+I'll try to keep this as current as possible, but it's a work in progress so updates will be random
+
 Enjoy and keep coding :)
 
 
