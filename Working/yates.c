@@ -8,7 +8,7 @@
  * Takes a random element, swap it with the last repeat with
  * a range of N - i (N = number of element, i = current index)
  *
- * Dominic Letourneau 16 August 2016
+ * Dom Letourneau 16 August 2016
  *
  * Coded using vim on a rasp pi 3 running Raspbian Jessie
  *
