@@ -16,5 +16,8 @@ I'll try to keep this as current as possible, but it's a work in progress so upd
 
 Enjoy and keep coding :)
 
+USAGE:
 
-P.S. The files in the Test folder are just small modules I made during the testing, they are light on comment since they are simple and pretty straightfoward.
+Generate the key set: ./yates keyfile
+Encrypt the text: ./encrypt keyfile sourceText cryptedText
+Decrypt the text: ./decrypt cryptedText clearText
