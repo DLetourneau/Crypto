@@ -19,5 +19,7 @@ Enjoy and keep coding :)
 USAGE:
 
 Generate the key set: ./yates keyfile
+
 Encrypt the text: ./encrypt keyfile sourceText cryptedText
+
 Decrypt the text: ./decrypt cryptedText clearText
