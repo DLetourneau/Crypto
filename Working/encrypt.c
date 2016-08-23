@@ -22,6 +22,8 @@
 #include <time.h>
 #include <sys/time.h>
 
+int fnGetKey(int count);
+
 int main(int argc, char* argv[])
 {
   // Argument validation
@@ -93,13 +95,7 @@ int main(int argc, char* argv[])
 	{
 		if (!iscntrl(c))
 		{
-			switch (charCount%4)
-			{
-				case 0:	keyToUse = 0; break;
-				case 1: keyToUse = 3; break;
-				case 2: keyToUse = 2; break;
-				case 3: keyToUse = 1; break;
-			}
+			keyToUse = fnGetKey(charCount%4);
 			
 			// Swap the valid chars
 			for(int i=0;i<70;i++)
@@ -127,4 +123,17 @@ int main(int argc, char* argv[])
 	}
 	fclose(source);
 	fclose(outptr);
+}
+
+int fnGetKey(int count)
+{
+	int output;
+	switch(count)
+	{
+		case 0: output=0;break;
+		case 1: output=3;break;
+		case 2: output=2;break;
+		case 3: output=1;break;
+	}
+	return output;
 }
