@@ -18,3 +18,8 @@ Generate the key set: ./yates keyfile
 Encrypt the text: ./encrypt keyfile sourceText cryptedText
 
 Decrypt the text: ./decrypt cryptedText clearText
+
+OR
+
+bash encryptor.sh
+bash decryptor.sh
