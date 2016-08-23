@@ -15,3 +15,4 @@ echo ""
 echo $cleartext" generated"
 rm $target
 echo $target" destroyed"
+vim $cleartext
