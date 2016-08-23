@@ -21,4 +21,5 @@ echo $target" generated"
 echo "Keys and "$source" destroyed"
 rm autokey.txt
 rm $source
+vim $target
 echo ""
