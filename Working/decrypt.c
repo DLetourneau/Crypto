@@ -18,6 +18,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+int fnGetKey(int count);
+
 int main(int argc, char* argv[])
 {
   // Argument Control
@@ -73,13 +75,7 @@ int main(int argc, char* argv[])
 		// Swap the crypted char with the clear text, skip the noise
 		else if ((allCount >= 284) && ((allCount - 284)%6 == 0))
 		{
-			switch(charCount%4)
-			{
-				case 0: keyToUse=0; break;
-				case 1: keyToUse=3; break;
-				case 2: keyToUse=2; break;
-				case 3: keyToUse=1; break;
-			}
+			keyToUse = fnGetKey(charCount%4);
 			for(int i=0;i<70;i++)
 			{
 				if(c == baseKey[i])
@@ -97,4 +93,17 @@ int main(int argc, char* argv[])
 	}
 	fclose(inptr);
 	fclose(outptr);
+}
+
+int fnGetKey(int count)
+{
+	int output;
+	switch(count)
+	{
+		case 0: output=0;break;
+		case 1: output=3;break;
+		case 2: output=2;break;
+		case 3: output=1;break;
+	}
+	return output;
 }
